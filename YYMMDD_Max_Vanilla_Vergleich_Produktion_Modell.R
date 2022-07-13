@@ -12,7 +12,7 @@ setwd("./csv")
 
 dir()
 bev <- list()
-bev$raw$prod <- fread("220101_220614_Nieder_Roden_L3_PET_CSD_Max Lemon_20_spc.csv", sep = ";", dec = ",")
+bev$raw$prod <- freadr4dt("220101_220614_Nieder_Roden_L3_PET_CSD_Max Lemon_20_spc.csv", sep = ";", dec = ",")
 bev$raw$prod <- bev$raw$prod[as.Date(bev$raw$prod$datetime) == "2022-06-11" , ]
 
 bev$raw$prod <- bev$raw$prod[ bev$raw$prod$X220 > .2 , ]
